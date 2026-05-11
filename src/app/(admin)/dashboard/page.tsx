@@ -110,7 +110,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="bg-[#25282C] p-8 rounded-[2.5rem] border border-slate-800 shadow-sm">
           <p className="text-slate-500 font-bold uppercase tracking-widest text-xs mb-4">Monthly Revenue</p>
-          <h2 className="text-4xl font-black text-white mb-2">R{stats?.monthly_revenue.toLocaleString()}</h2>
+          <h2 className="text-4xl font-black text-white mb-2">R{stats?.monthly_revenue?.toLocaleString() ?? '0'}</h2>
           <div className="flex items-center gap-2 text-green-500 font-bold text-sm">
             <Zap className="w-4 h-4 fill-current" /> +12% from last month
           </div>
@@ -129,7 +129,7 @@ export default function DashboardPage() {
         </div>
         <div className="bg-[#25282C] p-8 rounded-[2.5rem] border border-slate-800 shadow-sm">
           <p className="text-slate-500 font-bold uppercase tracking-widest text-xs mb-4">Pending Payments</p>
-          <h2 className="text-4xl font-black text-white mb-2">R{stats?.pending_payments.toLocaleString()}</h2>
+          <h2 className="text-4xl font-black text-white mb-2">R{stats?.pending_payments?.toLocaleString() ?? '0'}</h2>
           <p className="text-amber-500 font-bold text-sm">Requires attention</p>
         </div>
       </div>
