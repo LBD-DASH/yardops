@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+:root {
+  --background: #F8F9F7;
+  --foreground: #1A1A1A;
+  --primary: #2D5A27;
+  --primary-foreground: #FFFFFF;
+  --secondary: #4A7C44;
+  --secondary-foreground: #FFFFFF;
+  --accent: #D97706;
+  --accent-foreground: #FFFFFF;
+  --muted: #F8F9F7;
+  --muted-foreground: #4B5563;
+  --card: #FFFFFF;
+  --card-foreground: #1A1A1A;
+  --border: #E5E7E2;
+  --input: #E5E7E2;
+  --ring: #4A7C44;
+  --radius: 0.75rem;
+  --font-family: 'Inter', sans-serif;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --primary: #4A7C44;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2D5A27;
+  --secondary-foreground: #FFFFFF;
+  --accent: #D97706;
+  --accent-foreground: #FFFFFF;
+  --muted: #171717;
+  --muted-foreground: #a3a3a3;
+  --border: #262626;
+  --card: #171717;
+  --card-foreground: #ededed;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: var(--font-family);
+  }
+}
